@@ -33,7 +33,7 @@ module.exports = {
             name: `${filename}`,
             filename: `${filename}.js`,
             exposes: {
-                './BlockModule': './src/app/block/index.ts',
+                './LogicBlockModule': './src/app/logic-block/index.ts',
             },
             shared: share({
                 "@angular/core": { eager: true, singleton: true, strictVersion: true, requiredVersion: 'auto' }, 

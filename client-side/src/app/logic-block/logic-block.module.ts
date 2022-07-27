@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { TranslateLoader, TranslateModule, TranslateService, TranslateStore } from '@ngx-translate/core';
 import { PepAddonService } from '@pepperi-addons/ngx-lib';
+import { PepButtonModule } from '@pepperi-addons/ngx-lib/button';
+import { PepTextboxModule } from '@pepperi-addons/ngx-lib/textbox';
 
 import { LogicBlockComponent } from './index';
 
@@ -20,6 +22,8 @@ export const routes: Routes = [
     declarations: [LogicBlockComponent],
     imports: [
         CommonModule,
+        PepButtonModule,
+        PepTextboxModule,
         TranslateModule.forChild({
             loader: {
                 provide: TranslateLoader,
