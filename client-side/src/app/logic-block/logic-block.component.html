@@ -1,0 +1,10 @@
+<pep-textbox
+    [(value)]="slug"
+    [label]="'ExampleBlock_Slug_Label' | translate"
+    type="text"
+    [mandatory]="false"
+></pep-textbox>
+<div class="pep-border-top mat-dialog-actions">
+    <pep-button value="{{'ExampleBlock_Cancel' | translate}}" styleType="weak" sizeType="md" classNames="pep-spacing-element" (buttonClick)="closeDialogClick($event)"></pep-button>
+    <pep-button value="{{'ExampleBlock_Done' | translate}}" styleType="strong" sizeType="md" classNames="pep-spacing-element" (buttonClick)="doneClick($event)"></pep-button>
+</div>

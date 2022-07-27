@@ -1,3 +1,5 @@
 {
-    "Block_Title": "Block title"
+    "ExampleBlock_Slug_Label": "select slug to navigate",
+    "ExampleBlock_Cancel": "Cancel",
+    "ExampleBlock_Done": "Done"
 }

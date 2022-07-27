@@ -1,7 +1,7 @@
-import { PapiClient, InstalledAddon } from '@pepperi-addons/papi-sdk'
+import { PapiClient, InstalledAddon, Relation } from '@pepperi-addons/papi-sdk'
 import { Client } from '@pepperi-addons/debug-server';
 
-class MyService {
+class UtilitiesService {
 
     papiClient: PapiClient
 
@@ -15,18 +15,10 @@ class MyService {
         });
     }
 
-    doSomething() {
-        console.log("doesn't really do anything....");
-    }
-    
     // For page block template
-    upsertRelation(relation): Promise<any> {
-        return this.papiClient.post('/addons/data/relations', relation);
-    }
-
-    getAddons(): Promise<InstalledAddon[]> {
-        return this.papiClient.addons.installedAddons.find({});
+    async upsertRelation(relation): Promise<Relation> {
+        return await this.papiClient.addons.data.relations.upsert(relation);
     }
 }
 
-export default MyService;
+export default UtilitiesService;
