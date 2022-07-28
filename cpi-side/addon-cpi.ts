@@ -1,4 +1,5 @@
 import '@pepperi-addons/cpi-node'
+import { Client } from '@pepperi-addons/cpi-node/build/cpi-side/events/client';
 
 export const router = Router();
 
@@ -9,7 +10,14 @@ export async function load(configuration: any) {
 
 router.post('/example_block', async (req, res) => {
     if(req.body) {
-        console.log(`chosen slug is: ${req.body.slug}`);
+        if ((req as any).client)
+        {
+            let client = (req as any).client as Client;
+            await client.navigateTo({url:req.body.slug})
+        }
+        else {
+            console.log(`chosen slug is: ${req.body.slug}`);
+        }
     }
     else {
         console.log('no body was sent');
