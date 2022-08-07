@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "scripts": {
         "ng": "ng",
-        "start": "ng serve --live-reload=false",
+        "start": "ng serve --live-reload=false --port 4700",
         "start:block": "ng serve --port 4440 --live-reload=false",
         "build": "ng build",
         "build:block": "ng build --live-reload=false",

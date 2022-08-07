@@ -31,7 +31,7 @@ export class LogicBlockComponent implements OnInit {
     
     doneClick(value) {
         this.hostEvents.emit({
-            type: 'get-configuration',
+            type: 'set-configuration',
             configuration: {
                 Slug: this.slug
             }
