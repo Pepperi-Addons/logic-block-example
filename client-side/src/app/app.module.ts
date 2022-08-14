@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ApplicationRef, Component, DoBootstrap, Injector, NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { LogicBlockModule } from './logic-block/logic-block.module';
@@ -20,6 +21,7 @@ const routes: Routes = [
 
 @NgModule({
     imports: [
+        BrowserAnimationsModule,
         BrowserModule,
         LogicBlockModule,
         RouterModule.forRoot(routes),
