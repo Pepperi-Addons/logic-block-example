@@ -35,18 +35,20 @@ async function createBlockRelation(client: Client): Promise<any> {
         // TODO: change to block name (this is the unique relation name and the description that will be on the block).
         const blockName = 'ExampleBlock';
 
-        const filename = `file_${client.AddonUUID.replace(/-/g, '_').toLowerCase()}`;
+        const filename = `file_${client.AddonUUID}`;
 
         const logicBlockRelation: Relation = {
             RelationName: 'LogicBlock',
             Name: blockName,
             Description: `${blockName} block`,
             Type: "NgComponent",
-            SubType: "NG11",
+            SubType: "NG14",
             AddonUUID: client.AddonUUID,
             AddonRelativeURL: filename,
             ComponentName: `LogicBlockComponent`, // This is should be the block component name (from the client-side)
             ModuleName: `LogicBlockModule`, // This is should be the block module name (from the client-side),
+            ElementsModule: 'WebComponents',
+            ElementName: `example-logic-block-element-${client.AddonUUID}`,
             BlockExecutionRelativeURL: '/addon-cpi/example_block'
         };
 
