@@ -13,10 +13,10 @@ router.post('/example_block', async (req, res) => {
         if ((req as any).client)
         {
             let client = (req as any).client as Client;
-            await client.navigateTo({url:req.body.slug})
+            await client.navigateTo({url:req.body.Slug})
         }
         else {
-            console.log(`chosen slug is: ${req.body.slug}`);
+            console.log(`chosen slug is: ${req.body.Slug}`);
         }
     }
     else {
